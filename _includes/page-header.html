@@ -10,13 +10,15 @@
 <section class="page-header">
   <h1 class="project-name">{{ page-title }}</h1>
   <h2 class="project-tagline">{{ page-tagline }}</h2>
+  {% if page.layout == 'post'%}
+  <p class="meta">{{ page.date | date_to_string }}</p>
+  {% endif %}
   {% if page.role == 'major' %}
   <a href="{{ site.url }}" class="btn">首页</a>
   <a href="{{ site.url }}/blogpost.html" class="btn">日常</a>
   <a href="{{ site.url }}/math" class="btn">数学</a>
   <a href="{{ site.url }}/about.html" class="btn">作者</a>
-  {% endif %}
-  {% if page.layout == 'post'%}
-  <p class="meta">{{ page.date | date_to_string }}</p>
+  {% else %}
+  <a href="javascript:history.back(-1)" class="btn">返回上一页</a>
   {% endif %}
 </section>
