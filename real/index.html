@@ -1,0 +1,38 @@
+---
+layout: page
+title: 黑之庭院
+tagline: 我们所度过的每个平凡的日常，也许就是连续发生的奇迹
+side: real
+role: major
+---
+
+<h1 align="center">没想到你居然能发现这里</h1>
+
+<p align="center">这里是一些私人记录，想到什么就写些什么。</p>
+
+<hr align="center">
+
+<h2 align="center">时间会证明一切</h2>
+
+<p>本来打算写数学史的，后来发现自己既没有精力也没有耐心还没有知识，就索性当成日记来写了。</p>
+
+<p>最新内容</p>
+
+
+
+<div class="col-sm-12">
+    <ul>
+      {% for post in site.categories["时间会证明一切"] limit:3 %}
+      <li>
+        <h5>
+          <span class="text-muted small">
+            {{ post.date | date_to_string }}&nbsp;&nbsp;
+            </span>
+          <a href="{{ post.url | absolute_url }}">{{ post.title }}</a>
+        </h5>
+      </li>
+      {% endfor %}
+    </ul>
+</div>
+
+<p><a href="{{ site.url }}/category/时间会证明一切.html">查看更多</a></p>

@@ -6,21 +6,51 @@
 {% assign page-tagline = page.tagline | escape  %}
 {% endif %}
 
-
-<section class="page-header">
-  <h1 class="project-name">{{ page-title }}</h1>
-  <h2 class="project-tagline">{{ page-tagline }}</h2>
-  {% if page.layout == 'post'%}
-  <p class="meta">{{ page.date | date_to_string }}</p>
-  {% endif %}
-  {% if page.side == 'inner'%}
-  {% else %}
-    {% if page.role == 'major' %}
-      <a href="{{ site.url }}" class="btn">首页</a>
-      <a href="{{ site.url }}/blogpost.html" class="btn">数学</a>
-      <a href="{{ site.url }}/about.html" class="btn">作者</a>
-    {% else %}
-      <a href="javascript:history.back(-1)" class="btn">返回上一页</a>
-    {% endif %}
-  {% endif %}
-</section>
+{% if page.side == 'real' %}
+      <section class="page-header-real" >
+          <h1 class="project-name">{{ page-title }}</h1>
+          <h2 class="project-tagline">{{ page-tagline }}</h2>
+          {% if page.layout == 'post'%}
+            <p class="meta">{{ page.date | date_to_string }}</p>
+          {% endif %}
+          {% if page.role == 'major' %}
+            <a href="{{ site.url }}/real/index.html" class="btn">日常</a>
+            <a href="{{ site.url }}/real/about.html" class="btn">关于</a>
+          {% else %}
+            <a href="javascript:history.back(-1)" class="btn">返回上一页</a>
+          {% endif %}
+      </section>
+{% else %}
+{% if page.side == 'inner' %}
+      <section class="page-header-inner">
+          <h1 class="project-name">{{ page-title }}</h1>
+            {% if page.title == '创造主之庭' %}
+            <h2 class="project-tagline"><a style="color: #fff;display: contents;" href="{{ site.url }}/real/index.html">{{ page-tagline }}</a></h2>
+            {% else %}
+            <h2 class="project-tagline">{{ page-tagline }}</h2>
+            {% endif %}
+            {% if page.title == '黑之庭院' %}
+            <h4><a style="color: #310133; display: contents;" href="{{ site.url }}/inner/index.html">有所渴求的灵魂无法驻足于一成不变之中</a></h4>
+            {% endif %}
+            {% if page.role == 'major' %}
+            {% else %}
+            <a href="javascript:history.back(-1)" class="btn">返回上一页</a>
+            {% endif %}
+      </section>
+{% else %}
+      <section class="page-header">
+          <h1 class="project-name">{{ page-title }}</h1>
+          <h2 class="project-tagline">{{ page-tagline }}</h2>
+          {% if page.layout == 'post'%}
+            <p class="meta">{{ page.date | date_to_string }}</p>
+          {% endif %}
+          {% if page.role == 'major' %}
+            <a href="{{ site.url }}" class="btn">首页</a>
+            <a href="{{ site.url }}/blogpost.html" class="btn">数学</a>
+            <a href="{{ site.url }}/about.html" class="btn">作者</a>
+          {% else %}
+            <a href="javascript:history.back(-1)" class="btn">返回上一页</a>
+          {% endif %}
+      </section>
+{% endif %}
+{% endif %}

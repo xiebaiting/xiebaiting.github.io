@@ -1,5 +1,11 @@
 ---
 layout: default
 ---
-
+{% if page.side == 'inner' %}
+<body style="background-color: #222C32;
+height: 100%;
+font-family: 'Open Sans', sans-serif;
+box-sizing: border-box;
+"></body>
+{% endif %}
 {{ content }}
