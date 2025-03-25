@@ -140,6 +140,46 @@ a:hover { text-decoration: underline; }
 @media screen and (max-width: 42em) { .btn { display: block; width: 100%; padding: 0.75rem; font-size: 0.9rem; }
   .btn + .btn { margin-top: 1rem; margin-left: 0; } }
 
+.blog-thumbnail {
+  background-color: #ffffff;
+  border: 1px solid #e1e1e1; /* Subtle border color */
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  transition: transform 0.2s ease; /* Smooth hover effect */
+  margin: 20px;
+  text-decoration: none; /* 移除链接的下划线 */
+  display: block; /* 使得背景色变化仅限于链接区域 */
+}
+
+.blog-thumbnail:hover {
+  transform: translateY(-5px); /* Slight lift on hover */
+  background-color: #e0e0e0; 
+  text-decoration: none; /* 确保悬停时也没有下划线 */
+}
+
+.blog-thumbnail h2 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.blog-thumbnail p {
+  text-align: center;
+  font-size: 16px;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  text-indent: 2ch;
+}
+
+.blog-thumbnail .blog-date {
+  text-align: right;
+  font-size: 0.9em;
+  color: #888;  
+}
+
+
 .page-header { color: #fff; text-align: center; background-color: #159957; background-image: linear-gradient(120deg, #155799, #159957); }
 @media screen and (min-width: 64em) { .page-header { padding: 5rem 6rem; } }
 @media screen and (min-width: 42em) and (max-width: 64em) { .page-header { padding: 3rem 4rem; } }
@@ -154,6 +194,11 @@ a:hover { text-decoration: underline; }
 @media screen and (min-width: 64em) { .page-header-real { padding: 5rem 6rem; } }
 @media screen and (min-width: 42em) and (max-width: 64em) { .page-header-real { padding: 3rem 4rem; } }
 @media screen and (max-width: 42em) { .page-header-real { padding: 2rem 1rem; } }
+
+.page-header-stardew { color: #fff; text-align: center; background-image: url(../inner/tower/stardew/stardew.jpg); background-size: cover; background-repeat: no-repeat;}
+@media screen and (min-width: 64em) { .page-header-stardew { padding: 5rem 6rem; } }
+@media screen and (min-width: 42em) and (max-width: 64em) { .page-header-stardew { padding: 3rem 4rem; } }
+@media screen and (max-width: 42em) { .page-header-stardew { padding: 2rem 1rem; } }
 
 .project-name { margin-top: 0; margin-bottom: 0.1rem; }
 @media screen and (min-width: 64em) { .project-name { font-size: 3.25rem; } }

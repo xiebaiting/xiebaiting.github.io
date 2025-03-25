@@ -5,9 +5,32 @@ tagline: 和我签订契约，成为数学爱好者吧
 role: major
 ---
 
-<p style="font-style: italic;">
+<p style="text-indent: 2ch; font-style: italic;color: blue;">
   伟大的数学家们仿若天上的星辰，他们散发着光和热。而被掩藏在他们的阴影下，并享受他们的福泽的则是广大的数学工作者和爱好者们。他们反射原初的光亮，孕育崭新的生命，使奇迹得以迈向下一个奇迹。时间终究会熄灭星星，使之坍缩，留下的遗骸则化为黑洞——那便是数学本身，是命定之人终将迈入的深渊。
 </p>
+
+<hr align="center">
+
+<h2 align="center">罗盘的碎片</h2>
+
+<p>无尽科研生活中的一点思考碎片。若是同行者，与君共勉。</p>
+
+<div class="col-sm-12">
+    <ul>
+      {% for post in site.categories["罗盘的碎片"] limit:1 %}
+      <li>
+        <h5>
+          <span class="text-muted small">
+            {{ post.date | date_to_string }}&nbsp;&nbsp;
+            </span>
+          <a href="{{ post.url | absolute_url }}">{{ post.title }}</a>
+        </h5>
+      </li>
+      {% endfor %}
+    </ul>
+</div>
+
+<p><a href="{{ site.url }}/category/罗盘的碎片.html">查看更多</a></p>
 
  <!-- <a href="{{ site.url }}/category/test.html">test</a> -->
 
