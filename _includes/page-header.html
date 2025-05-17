@@ -42,7 +42,10 @@
           <h1 class="project-name">{{ page-title }}</h1>
           <h2 class="project-tagline">{{ page-tagline }}</h2>
           {% if page.layout == 'post'%}
+          {% if page.categories contains "日拱一卒" %}
+          {% else %}
             <p class="meta">{{ page.date | date_to_string }}</p>
+          {% endif %}  
           {% endif %}
           {% if page.role == 'major' %}
             <a href="{{ site.url }}" class="btn">首页</a>

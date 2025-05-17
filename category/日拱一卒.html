@@ -1,0 +1,23 @@
+---
+layout: page
+title: 日拱一卒
+tagline: 无数次地想要更努力一些，却总是以失败告终
+---
+
+<p style="text-indent: 2ch;">
+  因为觉得太摆了，所以打算读一点书来挤占一下娱乐时间，大概是睡前的样子。这些书也不能算是主业，所以也应该算是娱乐。这个专栏是用来记录每天读书的进展的，睡醒了就写一点。  
+</p>
+
+<p style="text-indent: 2ch;">
+  未来打算读完一些方向比较相近的书后写个note，那么那些读书记录会被放到一起，剩下的我姑且先放在杂记里。
+</p>
+
+    {% for page in site.notes %}
+    <div>
+    <a href="{{ page.url | absolute_url }}" class="blog-thumbnail">
+      <h2>{{ page.title }}</h2>
+      <p>{{ page.tagline }}</p>
+    </a>
+  </div>
+  {% endfor %}
+
