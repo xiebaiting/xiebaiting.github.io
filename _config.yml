@@ -16,6 +16,9 @@ gems:
 
 #Others
 markdown: kramdown
+kramdown:
+  math_engine: null
+
 
 collections:
   notes:

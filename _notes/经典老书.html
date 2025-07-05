@@ -1,0 +1,24 @@
+---
+layout: page
+title: 经典老书
+tagline: 优雅永不过时
+category: 经典老书
+---
+
+    <row>
+      <div class="col-sm-12">
+        <ul>
+          {% for post in site.categories[page.category] %}
+          <li>
+            <h5>
+              <span class="text-muted small"
+                >{{ post.date | date_to_string }}&nbsp;&nbsp;</span
+              >
+              <a href="{{ post.url | absolute_url }}">{{ post.title }}</a>
+            </h5>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </row>
+  
