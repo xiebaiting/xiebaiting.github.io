@@ -5,13 +5,25 @@ tagline: 无数次地想要更努力一些，却总是以失败告终
 ---
 
 <p style="text-indent: 2ch;">
-  因为觉得太摆了，所以打算读一点书来挤占一下娱乐时间，大概是睡前的样子。这些书也不能算是主业，所以也应该算是娱乐。这个专栏是用来记录每天读书的进展的，睡醒了就写一点。  
+  因为觉得太摆了，所以打算读一点书来挤占一下娱乐时间。这个专栏是用来记录每天读书的进展的，边看边写一点，就不需要纸笔了。
 </p>
 
 <p style="text-indent: 2ch;">
-  未来打算读完一些方向比较相近的书后写个note，那么那些读书记录会被放到一起，剩下的我姑且先放在杂记里。
+  本来打算挑本领域一些著名作品随便读读作为娱乐，结果发现虽然这些书不能算是主业，但根本没法用来娱乐。这次还是想以比较严肃的态度来对待它，希望不要再虎头蛇尾了。
 </p>
 
+<p style="text-indent: 2ch;">
+  我这个人，对自己没兴趣的东西总是提不起干劲，与此相关的一切工作都像裱糊匠干的活一样，金玉其外，败絮其中。与其端上来这么一坨，那不如就别这么做。
+</p>
+
+<p style="text-indent: 2ch;">
+  所以这次我不会再从头读到尾了。只挑看对眼了的读，然后把话用自己的方式说出来。说的越多，那我懂的也就越多了。
+</p>
+
+<p style="text-indent: 2ch;">
+  感觉一本书读差不多了我会把记录合起来写个note，未来打算读完一些主题比较相近的书后把那些读书记录放到一起写个介绍。目前就先罗列出来吧。
+</p>
+<!-- 
     {% for page in site.notes %}
     <div>
     <a href="{{ page.url | absolute_url }}" class="blog-thumbnail">
@@ -19,5 +31,21 @@ tagline: 无数次地想要更努力一些，却总是以失败告终
       <p>{{ page.tagline }}</p>
     </a>
   </div>
-  {% endfor %}
+  {% endfor %} -->
 
+  <row>
+    <div class="col-sm-12">
+      <ul>
+        {% for post in site.categories["日拱一卒"] %}
+        <li>
+          <h5>
+            <span class="text-muted small"
+              >{{ post.date | date_to_string }}&nbsp;&nbsp;</span
+            >
+            <a href="{{ post.url | absolute_url }}">{{ post.title }}</a>
+          </h5>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </row>
