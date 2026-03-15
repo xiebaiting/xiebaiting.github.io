@@ -1,0 +1,36 @@
+---
+layout: page
+title: 数学好玩
+tagline: 做一些“不发文章”的研究和思考
+category: 数学好玩
+---
+
+<p style="text-indent: 2ch;">
+    之前把调子起太高了，好像这里总得写点有价值的东西之类的，导致我一个字也写不下来。
+</p>
+
+<p style="text-indent: 2ch;">
+    现在想想，除了工作时间外，我也很难再全身心投入到数学里面去，尤其是虚无缥缈的东西上去。
+</p>
+
+<p style="text-indent: 2ch;">
+    说到底，我喜欢数学可能只是因为喜欢解谜成功的成就感罢了。在放松的地方折磨自己，我向来是有心做也做不到的。
+</p>
+
+<p style="text-indent: 2ch;">
+    所以干脆做一些与本职工作无关的“数学”吧，或许没什么价值，也不需要受人关注，但放在这里不是刚好吗？
+</p>
+
+<p style="text-indent: 2ch;">
+    这个专栏的更新会比较少，或许我每挂一篇ArXiv就会写一篇吧。也要看这些小问题的进度。
+
+  {% for post in site.categories[page.category] %}
+  <div>
+  <a href="{{ post.url | absolute_url }}" class="blog-thumbnail">
+    <h2>{{ post.title }}</h2>
+    <p>{{ post.tagline }}</p>
+    <p class="blog-date">{{ post.date | date_to_string }}</p>
+  </a>
+</div>
+{% endfor %}
+ 

@@ -1,0 +1,43 @@
+---
+layout: page
+title: 活在当下
+tagline: 数学工作者的本职，也只有数学而已。
+---
+
+<p style="text-indent: 2ch;">
+  开始以数学作为工作以后，这样的念头在我心中愈发强烈：除了做出自己的东西以外，其他杂事都不重要。
+</p>
+
+<p style="text-indent: 2ch;">
+  对于那些杂音，与其因它烦忧，甚至认真地对待它，不如将它当个笑话讲了。
+</p>
+
+<p style="text-indent: 2ch;">
+  以下内容均系虚构，与现实生活无关，请勿对号入座。如有雷同，或许是你的脑洞和AI一样大。
+</p>
+<!-- 
+    {% for page in site.notes %}
+    <div>
+    <a href="{{ page.url | absolute_url }}" class="blog-thumbnail">
+      <h2>{{ page.title }}</h2>
+      <p>{{ page.tagline }}</p>
+    </a>
+  </div>
+  {% endfor %} -->
+
+  <row>
+    <div class="col-sm-12">
+      <ul>
+        {% for post in site.categories["活在当下"] %}
+        <li>
+          <h5>
+            <span class="text-muted small"
+              >{{ post.date | date_to_string }}&nbsp;&nbsp;</span
+            >
+            <a href="{{ post.url | absolute_url }}">{{ post.title }}</a>
+          </h5>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </row>

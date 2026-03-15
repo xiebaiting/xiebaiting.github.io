@@ -11,6 +11,29 @@ role: major
 
 <hr align="center">
 
+<h2 align="center">活在当下</h2>
+
+<p align="center">数学工作者的日常，与数学无关。</p>
+
+<div class="col-sm-12">
+    <ul>
+      {% for post in site.categories["活在当下"] limit:1 %}
+      <li>
+        <h5>
+          <span class="text-muted small">
+            {{ post.date | date_to_string }}&nbsp;&nbsp;
+            </span>
+          <a href="{{ post.url | absolute_url }}">{{ post.title }}</a>
+        </h5>
+      </li>
+      {% endfor %}
+    </ul>
+</div>
+
+<p><a href="{{ site.url }}/category/活在当下.html">查看更多</a></p>
+
+<!-- <hr align="center">
+
 <h2 align="center">罗盘的碎片</h2>
 
 <p align="center">无尽科研生活中的一点思考碎片。若是同行者，与君共勉。</p>
@@ -30,7 +53,7 @@ role: major
     </ul>
 </div>
 
-<p><a href="{{ site.url }}/category/罗盘的碎片.html">查看更多</a></p>
+<p><a href="{{ site.url }}/category/罗盘的碎片.html">查看更多</a></p> -->
 
 <!-- <hr align="center">
 
